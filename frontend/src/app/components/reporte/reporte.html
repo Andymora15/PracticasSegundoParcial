@@ -1,0 +1,30 @@
+<div class="reporte">
+  <h2>Reporte histórico de gastos</h2>
+  <div class="filtros">
+    <label>Fecha inicio:</label>
+    <input type="date" [(ngModel)]="fechaInicio" name="fechaInicio" />
+    <label>Fecha fin:</label>
+    <input type="date" [(ngModel)]="fechaFin" name="fechaFin" />
+    <button class="btn-primary" (click)="filtrarPorFecha()">Filtrar</button>
+  </div>
+  <table style="width:100%">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Nombre</th>
+        <th>Gasto</th>
+        <th>Monto</th>
+        <th>Información</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let gasto of gastos">
+        <td>{{ gasto.createdAt | date:'short' }}</td>
+        <td>{{ gasto.nombre }}</td>
+        <td>{{ gasto.gasto }}</td>
+        <td>{{ gasto.monto | currency:'USD' }}</td>
+        <td>{{ gasto.informacion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

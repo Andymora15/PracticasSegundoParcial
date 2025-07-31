@@ -1,0 +1,21 @@
+<div class="formulario">
+  <h2>{{ editMode ? 'Editar gasto' : 'Nuevo gasto' }}</h2>
+  <form (ngSubmit)="guardarGasto()" #gastoForm="ngForm">
+    <label>Nombre:</label>
+    <input type="text" [(ngModel)]="gasto.nombre" name="nombre" required />
+
+    
+    <label>Gasto:</label>
+    <input type="text" [(ngModel)]="gasto.gasto" name="gasto" required />
+
+    <label>Monto:</label>
+    <input type="number" [(ngModel)]="gasto.monto" name="monto" required />
+
+    <label>Información:</label>
+    <textarea [(ngModel)]="gasto.informacion" name="informacion" required></textarea>
+
+    <button class="btn-primary" type="submit">{{ editMode ? 'Actualizar' : 'Crear' }}</button>
+    <button class="btn-primary" type="button" (click)="resetForm()">Limpiar</button>
+  </form>
+  <div *ngIf="mensaje" style="margin-top:1em;color:#a569bd;">{{ mensaje }}</div>
+</div>

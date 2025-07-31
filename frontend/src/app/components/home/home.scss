@@ -1,0 +1,24 @@
+@use '../../../styles.scss' as *;
+.home {
+  text-align: center;
+  margin-top: 4em;
+  h1 {
+    color: $color-dark;
+    background: $color-primary;
+    margin-bottom: 0.5em;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  }
+  p {
+    color: $color-dark;
+    background: $color-gray;
+    margin-bottom: 2em;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    display: inline-block;
+  }
+  nav {
+    margin-top: 2em;
+  }
+}

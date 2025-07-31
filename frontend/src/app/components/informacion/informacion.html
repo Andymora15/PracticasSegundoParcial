@@ -1,0 +1,34 @@
+<div class="informacion-container">
+  <div>
+    <h2>Gestión de gastos</h2>
+    <button class="btn-primary" routerLink="/formulario">Nuevo gasto</button>
+    <button class="btn-primary" (click)="getGastos()">Actualizar</button>
+  </div>
+  <div class="table">
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Gasto</th>
+          <th>Monto</th>
+          <th>Información</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let gasto of gastos">
+          <td>{{ gasto.nombre }}</td>
+          <td>{{ gasto.gasto }}</td>
+          <td>{{ gasto.monto | currency:'USD' }}</td>
+          <td>{{ gasto.informacion }}</td>
+          <td>
+            
+            <button class="btn-primary btn-small btn-danger" (click)="deleteGasto(gasto._id!)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="loading" class="loading">Cargando...</div>
+    <div *ngIf="gastos.length === 0 && !loading" class="no-data">No hay gastos registrados</div>
+  </div>
+</div>
