@@ -1,0 +1,38 @@
+@use '../../../styles.scss' as *;
+.menu {
+  background: $color-primary;
+  padding: 2em;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 2em auto;
+  box-shadow: 0 2px 8px rgba(17,17,17,0.07);
+  h2 {
+    color: $color-dark;
+    background: $color-primary;
+    margin-bottom: 1em;
+    text-align: center;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    a {
+      text-align: center;
+      font-size: 1.1em;
+      color: $color-dark;
+      background: $color-gray;
+      border-radius: 4px;
+      padding: 0.5em 0;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+      &:hover {
+        background: $color-dark;
+        color: $color-primary;
+      }
+    }
+  }
+}

@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   .catch(err => console.error('Error de conexión:', err));
 
 // Rutas
-app.use('/api/gastos', gastoRoutes);
+app.use('/gastos', gastoRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

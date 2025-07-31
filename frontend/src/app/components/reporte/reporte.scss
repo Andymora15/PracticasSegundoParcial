@@ -1,0 +1,38 @@
+@use '../../../styles.scss' as *;
+.reporte {
+  background: $color-gray;
+  padding: 2em;
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 2em auto;
+  box-shadow: 0 2px 8px rgba(17,17,17,0.07);
+  h2 {
+    color: $color-dark;
+    background: $color-primary;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 1em;
+  }
+  .filtros {
+    margin-bottom: 1em;
+    label {
+      color: $color-dark;
+      background: $color-primary;
+      padding: 0.2em 0.5em;
+      border-radius: 4px;
+      margin-right: 0.5em;
+    }
+    input {
+      margin-right: 1em;
+      background: $color-gray;
+      color: $color-dark;
+      border: 1px solid $color-dark;
+      border-radius: 4px;
+      padding: 0.3em;
+    }
+    button {
+      margin-left: 1em;
+    }
+  }
+}

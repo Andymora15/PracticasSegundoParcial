@@ -1,0 +1,83 @@
+// Paleta: amarillo, negro, blanco
+
+.informacion-container {
+  background: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+h2 {
+  color: #111;
+  background: #ffe600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #ffe600;
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-primary:hover {
+  background: #111;
+  color: #ffe600;
+}
+.btn-danger {
+  background: #111;
+  color: #ffe600;
+}
+.btn-danger:hover {
+  background: #ffe600;
+  color: #111;
+}
+
+.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  margin-top: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+}
+th {
+  background: #111;
+  color: #ffe600;
+  font-weight: bold;
+}
+tbody tr:nth-child(even) {
+  background: #ffe600;
+  color: #111;
+}
+tbody tr:nth-child(odd) {
+  background: #fff;
+  color: #111;
+}
+.loading {
+  color: #111;
+  background: #ffe600;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+}
+.no-data {
+  color: #fff;
+  background: #111;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  text-align: center;
+}
